@@ -10,3 +10,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Added GitHub Actions workflow for publishing stable and pre-release builds via VSCE.
 - Documented guidance for opting into pre-release channels for individual extensions after installing the pack.
 - Expanded `.gitignore` to exclude build outputs and temporary files.
+- Updated publishing workflow to run on `main` pushes and automatically set the version to `0.0.<run_number>` before publishing.

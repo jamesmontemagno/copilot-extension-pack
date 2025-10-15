@@ -19,6 +19,7 @@ GitHub Extension Pack bundles the essential GitHub tooling for Visual Studio Cod
 ### Automated publishing
 - Configure a `VSCE_TOKEN` secret in your repository with a Marketplace Personal Access Token that has the `Marketplace (Publish)` scope.
 - Trigger the **Publish Extension Pack** workflow manually to choose between stable or pre-release publishing, or simply create a GitHub release (mark it as pre-release to push to the pre-release channel).
+- Pushes to `main` automatically run the publish workflow, which bumps the version to `0.0.<run_number>` before invoking `vsce`.
 - If you ship a stable build, remind users to flip individual extensions to their pre-release channel inside VS Code if they want bleeding-edge features for Copilot, Codespaces, or other bundled tools.
 
 ### Feedback and contributions

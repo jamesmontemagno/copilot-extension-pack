@@ -1,6 +1,9 @@
 name: Publish Extension Pack
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       release_type:
@@ -22,6 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
+      PUBLISH_ARGS: ""
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -33,6 +37,15 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Calculate version
+        run: |
+          VERSION="0.0.${GITHUB_RUN_NUMBER}"
+          echo "VERSION=${VERSION}" >> "$GITHUB_ENV"
+          echo "Version ${VERSION}"
+
+      - name: Update package version
+        run: npm version "${VERSION}" --no-git-tag-version
 
       - name: Resolve release channel
         run: |
@@ -61,3 +74,4 @@ jobs:
         if: success()
         run: |
           echo "Published channel: ${RELEASE_TYPE:-stable}" >> $GITHUB_STEP_SUMMARY
+          echo "Version: ${VERSION}" >> $GITHUB_STEP_SUMMARY
