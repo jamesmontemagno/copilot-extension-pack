@@ -1,3 +1,9 @@
 node_modules
 *.vsix
 .env
+out/
+dist/
+.vscode-test/
+*.log
+*.tgz
+.DS_Store

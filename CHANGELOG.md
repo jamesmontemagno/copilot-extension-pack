@@ -9,3 +9,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Initial release bundling GitHub Actions, Copilot, Copilot Chat, GitHub Pull Requests and Issues, VS Code Speech, GitHub Repositories, and GitHub Codespaces extensions.
 - Added GitHub Actions workflow for publishing stable and pre-release builds via VSCE.
 - Documented guidance for opting into pre-release channels for individual extensions after installing the pack.
+- Expanded `.gitignore` to exclude build outputs and temporary files.
