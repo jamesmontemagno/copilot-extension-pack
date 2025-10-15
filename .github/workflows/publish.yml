@@ -45,7 +45,9 @@ jobs:
           echo "Version ${VERSION}"
 
       - name: Update package version
-        run: npm version "${VERSION}" --no-git-tag-version
+        run: |
+          jq ".version = \"${VERSION}\"" package.json > package.json.tmp
+          mv package.json.tmp package.json
 
       - name: Resolve release channel
         run: |
