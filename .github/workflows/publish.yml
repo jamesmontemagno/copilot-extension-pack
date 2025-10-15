@@ -1,0 +1,63 @@
+name: Publish Extension Pack
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: "Publish channel"
+        required: true
+        default: stable
+        type: choice
+        options:
+          - stable
+          - pre-release
+  release:
+    types:
+      - released
+      - prereleased
+
+jobs:
+  publish:
+    name: Publish via VSCE
+    runs-on: ubuntu-latest
+    env:
+      VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Resolve release channel
+        run: |
+          if [ "${{ github.event_name }}" = "release" ]; then
+            if [ "${{ github.event.release.prerelease }}" = "true" ]; then
+              echo "PUBLISH_ARGS=--pre-release" >> "$GITHUB_ENV"
+              echo "RELEASE_TYPE=pre-release" >> "$GITHUB_ENV"
+            else
+              echo "RELEASE_TYPE=stable" >> "$GITHUB_ENV"
+            fi
+          else
+            if [ "${{ github.event.inputs.release_type }}" = "pre-release" ]; then
+              echo "PUBLISH_ARGS=--pre-release" >> "$GITHUB_ENV"
+              echo "RELEASE_TYPE=pre-release" >> "$GITHUB_ENV"
+            else
+              echo "RELEASE_TYPE=stable" >> "$GITHUB_ENV"
+            fi
+          fi
+
+      - name: Publish extension
+        run: npx --yes @vscode/vsce publish ${{ env.PUBLISH_ARGS }}
+        env:
+          RELEASE_TYPE: ${{ env.RELEASE_TYPE }}
+
+      - name: Summary
+        if: success()
+        run: |
+          echo "Published channel: ${RELEASE_TYPE:-stable}" >> $GITHUB_STEP_SUMMARY

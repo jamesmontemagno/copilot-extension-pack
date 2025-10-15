@@ -1,0 +1,22 @@
+{
+  "name": "github-extension-pack",
+  "displayName": "GitHub & GitHub Copilot Ultimate Extension Pack",
+  "description": "Bundle of GitHub & GitHub Copilot productivity extensions for VS Code.",
+  "publisher": "vs-publisher-473885",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "extensionPack": [
+    "GitHub.vscode-github-actions",
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "GitHub.vscode-pull-request-github",
+    "ms-vscode.vscode-speech",
+    "GitHub.remotehub",
+    "GitHub.codespaces"
+  ]
+}
