@@ -1,0 +1,20 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="64" fill="#1f6feb"/>
+  
+  <!-- Copilot icon (stylized AI/chat bubble) -->
+  <g transform="translate(64, 64)">
+    <!-- Chat bubble -->
+    <path d="M -20 -25 L 20 -25 Q 25 -25 25 -20 L 25 15 Q 25 20 20 20 L 5 20 L 0 30 L 5 20 L -20 20 Q -25 20 -25 15 L -25 -20 Q -25 -25 -20 -25" 
+          fill="#58a6ff" opacity="0.9"/>
+    
+    <!-- Copilot stylized symbol (overlapping circles) -->
+    <circle cx="-8" cy="-5" r="5" fill="#ffffff" opacity="0.9"/>
+    <circle cx="0" cy="0" r="5" fill="#ffffff" opacity="0.9"/>
+    <circle cx="8" cy="-5" r="5" fill="#ffffff" opacity="0.9"/>
+    
+    <!-- Spark/star accent -->
+    <path d="M 0 -18 L 2 -10 L 10 -10 L 4 -5 L 6 3 L 0 -2 L -6 3 L -4 -5 L -10 -10 L -2 -10 Z" 
+          fill="#ffd33d" opacity="0.95"/>
+  </g>
+</svg>

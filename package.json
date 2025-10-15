@@ -4,6 +4,12 @@
   "description": "Bundle of GitHub & GitHub Copilot productivity extensions for VS Code.",
   "publisher": "vs-publisher-473885",
   "version": "0.0.1",
+  "license": "SEE LICENSE IN LICENSE",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1f6feb",
+    "theme": "dark"
+  },
   "engines": {
     "vscode": "^1.105.0"
   },
@@ -18,5 +24,9 @@
     "ms-vscode.vscode-speech",
     "GitHub.remotehub",
     "GitHub.codespaces"
-  ]
+  ],
+  "devDependencies": {
+    "@vscode/codicons": "^0.0.41",
+    "sharp": "^0.34.4"
+  }
 }
