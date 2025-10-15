@@ -11,5 +11,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Documented guidance for opting into pre-release channels for individual extensions after installing the pack.
 - Expanded `.gitignore` to exclude build outputs and temporary files.
 - Updated publishing workflow to run on `main` pushes and automatically set the version to `0.0.<run_number>` before publishing.
-- Created extension pack icon (GitHub + Copilot themed) with dark gallery banner.
+- Created extension pack icon (magical code grimoire with sparkles).
 - Added MIT license.
+- Updated README with user-friendly documentation.
