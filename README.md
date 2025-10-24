@@ -23,7 +23,7 @@ This pack installs 7 powerful extensions:
 
 ## 🚀 Getting Started
 
-1. **Install the pack** from the [VS Code Marketplace](https://marketplace.visualstudio.com/)
+1. **Install the pack** from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-473885.github-copilot-ultimate-extension-pack)
 2. **Reload VS Code** when prompted
 3. **Sign in to GitHub** - Click the account icon in the bottom-left corner
 4. **Start coding!** - All extensions are ready to use
