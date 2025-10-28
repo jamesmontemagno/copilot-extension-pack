@@ -2,6 +2,9 @@
 
 Your complete toolkit for GitHub development in Visual Studio Code! 🚀✨
 
+[![Install in VS Code](https://img.shields.io/badge/VS%20Code-Install-0098FF?logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=vs-publisher-473885.github-copilot-ultimate-extension-pack)
+[![Install in VS Code Insiders](https://img.shields.io/badge/VS%20Code%20Insiders-Install-24bfa5?logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=vs-publisher-473885.github-copilot-ultimate-extension-pack)
+
 This extension pack bundles all the essential GitHub extensions you need to supercharge your development workflow - from AI-powered coding assistance to seamless pull request reviews and cloud-based development environments.
 
 ## ✨ What's Included
